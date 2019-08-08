@@ -16,12 +16,7 @@ from SublimeLinter.lint import NodeLinter, util, highlight
 class PugLint(NodeLinter):
     """Provides an interface to pug-lint."""
 
-    npm_name = 'pug-lint'
     cmd = 'pug-lint @ *'
-    executable = None
-    version_args = '--version'
-    version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 2.1.1'
     regex = r'^.+?:(?P<line>\d+)(:(?P<col>\d+) | )(?P<message>.+)'
     multiline = False
     tempfile_suffix = 'pug'
